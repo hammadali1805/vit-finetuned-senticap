@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Caption Results</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    img { max-width: 500px; height: auto; display: block; margin-bottom: 20px; }
+    .caption { margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+  <h1>Caption Results</h1>
+  <img src="{{ image_url }}" alt="Uploaded Image">
+  <div class="caption">
+    <h2>Fine Tuned Model Caption:</h2>
+    <p>{{ caption_fine }}</p>
+  </div>
+  <div class="caption">
+    <h2>Non Fine Tuned Model Caption:</h2>
+    <p>{{ caption_non_fine }}</p>
+  </div>
+  <a href="{{ url_for('index') }}">Upload another image</a>
+</body>
+</html>
